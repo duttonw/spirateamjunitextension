@@ -29,19 +29,25 @@ public class SpiraReportSender {
 			public void run() {
 				SpiraReportJob job = null;
 				int reportCount = 0; 
-
+				int reportNotSubmittedCount = 0;
 				while (!jobQueue.isEmpty()) {
 					job = jobQueue.firstElement();
 					jobQueue.remove(job);
-					getInstance().sendSpiraReport(
+					
+					String returnValue = getInstance().sendSpiraReport(
 							job.getUrl(),
 							job.getAction(),
 							job.getMethod(),
 							job.getReport());
-					++reportCount;
+					if (returnValue.contains("Error")){
+						++reportNotSubmittedCount;
+					} else {
+						++reportCount;
+					}
 				}
 
 				System.out.println("" + reportCount + " report[s] submitted");
+				System.out.println("" + reportNotSubmittedCount + " report[s] NOT submitted");
 			}
 		});
 	}
@@ -84,9 +90,10 @@ public class SpiraReportSender {
 			writer.print(spiraReport);
 			writer.flush();
 
-			@SuppressWarnings("unused")
 			int response = connection.getResponseCode();
-
+			if (response == 500){
+				return "Error: Connection 500 Returned";
+			}
 			InputStream in = connection.getInputStream();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
