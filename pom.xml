@@ -11,7 +11,7 @@
 
     <groupId>com.inflectra.spiratest</groupId>
     <artifactId>spirajunitextension</artifactId>
-    <version>0.2</version>
+    <version>0.2.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Spira-Junit integration</name>
 
