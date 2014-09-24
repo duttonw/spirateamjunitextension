@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
 
     <groupId>com.inflectra.spiratest</groupId>
     <artifactId>spirajunitextension</artifactId>
-    <version>0.2.2-SNAPSHOT</version>
+    <version>0.2.2</version>
     <packaging>jar</packaging>
     <name>Spira-Junit integration</name>
 
@@ -82,9 +81,9 @@
     </build>
 
 	<scm>
-		<connection>scm:svn:http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/trunk/</connection>
-		<developerConnection>scm:svn:http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/trunk/</developerConnection>
-		<url>http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/trunk/</url>
+		<connection>scm:svn:http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/tags/spirajunitextension-0.2.2</connection>
+		<developerConnection>scm:svn:http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/tags/spirajunitextension-0.2.2</developerConnection>
+		<url>http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/tags/spirajunitextension-0.2.2</url>
 	</scm>
 	
 </project>
