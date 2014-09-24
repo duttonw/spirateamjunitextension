@@ -81,5 +81,11 @@
         </plugins>
     </build>
 
+	<scm>
+		<connection>scm:svn:http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/trunk/</connection>
+		<developerConnection>scm:svn:http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/trunk/</developerConnection>
+		<url>http://svn.css.citec.com.au/confirm/test/tools/spirateamjunitextension/trunk/</url>
+	</scm>
+	
 </project>
 
