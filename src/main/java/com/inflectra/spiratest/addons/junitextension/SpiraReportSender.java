@@ -98,11 +98,11 @@ public class SpiraReportSender {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
 			// Read the response from the server ... times out if the response
-			// takes more than 3 seconds
+			// takes more than 10 seconds
 			String inputLine;
 			StringBuffer sb = new StringBuffer(1000);
 
-			int wait_seconds = 3; // change if you find that your server is too slow
+			int wait_seconds = 10; // change if you find that your server is too slow
 			boolean timeout = false;
 			long m = System.currentTimeMillis();
 
