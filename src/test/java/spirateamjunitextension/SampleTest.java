@@ -15,10 +15,11 @@ import com.inflectra.spiratest.addons.junitextension.SpiraTestWatchman;
 //-DSpiraPassword=123uploader //password of the auto test runner 
 //-DSpiraProjectId=1 //ProjectId where test is located
 //-DSpiraReleaseId=1 //ReleaseId in project is optional but is useful to run tests in an iteration or next version.
+// e.g. -DEnableSpiraReporting=true -DSpiraUrl=https://spirateam.com -DSpiraLogin=uploader -DSpiraPassword=123abcDEF -DSpiraProjectId=79 -DSpiraReleaseId=646 -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled -XX:+UseConcMarkSweepGC -XX:MaxPermSize=512m
 public class SampleTest {
 	
 	@Rule
-	public SpiraTestWatchman spiraTestWatchman = new SpiraTestWatchman();   //Required else it won't report at the end of all junit tests
+	public MethodRule spiratestwatchmen = new SpiraTestWatchman();   //Required else it won't report at the end of all junit tests
 	
 	@Test
 	@SpiraTestCase(testCaseId=1)//testCaseId is the id number of the test case in spireaTeam, do not include any extra 0's on the front.
